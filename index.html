@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Londoño & Pineda | Abogados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #121212;
+            --light-gold: #e2c286;
+        }
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-text {
+            color: var(--gold);
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border { border-color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        
+        /* Efecto de cristal para secciones */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        /* Animación de flotado para WhatsApp */
+        .float-btn {
+            box-shadow: 0px 4px 15px rgba(197, 160, 89, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Hero Video/Image Overlay */
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(18,18,18,1));
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center transition-all duration-500" id="navbar">
+        <div class="text-2xl font-bold gold-text">L&P</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#inicio" class="hover:text-[#c5a059] transition">Inicio</a>
+            <a href="#nosotros" class="hover:text-[#c5a059] transition">Firma</a>
+            <a href="#servicios" class="hover:text-[#c5a059] transition">Especialidades</a>
+            <a href="#contacto" class="hover:text-[#c5a059] transition">Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2070" class="w-full h-full object-cover opacity-30" alt="Fondo Legal">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="z-10" data-aos="zoom-in" data-aos-duration="2000">
+            <h1 class="text-5xl md:text-8xl font-bold mb-4 gold-text">Londoño & Pineda</h1>
+            <p class="text-xl md:text-2xl tracking-[0.5em] uppercase font-light text-gray-300">Abogados </p>
+            <div class="mt-10 h-1 w-24 bg-gold mx-auto"></div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-24 px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl mb-6 gold-text">Excelencia Jurídica</h2>
+                <p class="text-gray-400 leading-loose mb-6">
+                    En Londoño & Pineda, transformamos la complejidad legal en soluciones estratégicas. Nuestra firma se fundamente en la integridad, el rigor analítico y una defensa inquebrantable de los intereses de nuestros clientes.
+                </p>
+                <p class="text-gray-400 leading-loose">
+                    Representamos la nueva era del derecho: ágil, sofisticada y profundamente humana.
+                </p>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="border-2 gold-border p-4">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1000" alt="Oficina" class="grayscale hover:grayscale-0 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-[#0a0a0a] px-8">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-4xl gold-text mb-4" data-aos="fade-up">Áreas de Práctica</h2>
+            <p class="text-gray-500">Especialistas en casos de alta complejidad</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="glass p-10 group hover:bg-[#c5a059] transition-all duration-500 transform hover:-translate-y-4" data-aos="flip-left">
+                <div class="mb-6 text-gold group-hover:text-black transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                </div>
+                <h3 class="text-xl mb-4 group-hover:text-black font-bold">Derecho Corporativo</h3>
+                <p class="text-sm text-gray-400 group-hover:text-gray-800">Estructuración legal para empresas que buscan blindaje y crecimiento en mercados globales.</p>
+            </div>
+
+            <div class="glass p-10 group hover:bg-[#c5a059] transition-all duration-500 transform hover:-translate-y-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="mb-6 text-gold group-hover:text-black transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl mb-4 group-hover:text-black font-bold">Derecho Civil</h3>
+                <p class="text-sm text-gray-400 group-hover:text-gray-800">Defensa integral en litigios civiles, contratos y resolución de conflictos patrimoniales.</p>
+            </div>
+
+            <div class="glass p-10 group hover:bg-[#c5a059] transition-all duration-500 transform hover:-translate-y-4" data-aos="flip-left" data-aos-delay="400">
+                <div class="mb-6 text-gold group-hover:text-black transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                </div>
+                <h3 class="text-xl mb-4 group-hover:text-black font-bold">Asesoría Notarial</h3>
+                <p class="text-sm text-gray-400 group-hover:text-gray-800">Gestión eficiente de trámites legales y validación de documentos con respaldo institucional.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-20 border-t border-gray-900 bg-[#050505] text-center">
+        <div class="max-w-6xl mx-auto px-8">
+            <p class="gold-text font-serif text-3xl mb-2" data-aos="fade-up">Londoño & Pineda</p>
+            <p class="text-gray-600 text-xs tracking-[0.3em] mb-12 uppercase" data-aos="fade-up" data-aos-delay="100">Excelencia Jurídica • Medellín, Colombia</p>
+            
+            <div class="flex justify-center items-center space-x-8 mb-12" data-aos="zoom-in">
+                
+                <a href="https://instagram.com/TU_PERFIL" target="_blank" class="group relative p-4 glass rounded-2xl transition-all duration-500 hover:scale-110 hover:border-[#E1306C]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-gray-400 group-hover:text-[#E1306C] transition-colors duration-300" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0h.001zm-.512 1.445c.833-.038 1.112-.047 3.065-.047 1.954 0 2.233.009 3.065.047.784.036 1.21.166 1.493.276.374.145.64.318.92.598.28.28.453.546.598.92.11.281.24.707.276 1.493.038.833.047 1.112.047 3.065s-.009 2.233-.047 3.065c-.036.784-.166 1.21-.276 1.493a2.49 2.49 0 0 1-.598.92 2.49 2.49 0 0 1-.92.598c-.281.11-.707.24-1.493.276-.833.038-1.112.047-3.065.047-1.954 0-2.233-.009-3.065-.047-.784-.036-1.21-.166-1.493-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.598-.92c-.11-.281-.24-.707-.276-1.493-.038-.833-.047-1.112-.047-3.065 0-1.953.009-2.233.047-3.065.036-.784.166-1.21.276-1.493.145-.374.319-.64.598-.92.28-.28.546-.453.92-.598.282-.11.707-.24 1.493-.276zm3.502 3.651a1.125 1.125 0 1 0 2.25 0 1.125 1.125 0 0 0-2.25 0zM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 1.44a2.56 2.56 0 1 1 0 5.12 2.56 2.56 0 0 1 0-5.12z"/>
+                    </svg>
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity font-bold">INSTAGRAM</span>
+                </a>
+
+                <a href="https://facebook.com/TU_PERFIL" target="_blank" class="group relative p-4 glass rounded-2xl transition-all duration-500 hover:scale-110 hover:border-[#1877F2]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-gray-400 group-hover:text-[#1877F2] transition-colors duration-300" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity font-bold">FACEBOOK</span>
+                </a>
+            </div>
+
+            <p class="text-gray-700 text-[10px] tracking-widest">© 2024 LONDOÑO & PINEDA. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573024170164" target="_blank" 
+       class="fixed bottom-8 right-8 z-[100] float-btn transition-all duration-300 hover:scale-110 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]"
+       title="Contactar con un abogado por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+             alt="Logo oficial de WhatsApp" 
+             class="w-16 h-16 md:w-20 md:h-20"
+             style="aspect-ratio: 1/1;">
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Cambio de estilo del navbar al hacer scroll
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#121212]', 'shadow-2xl', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-[#121212]', 'shadow-2xl', 'py-4');
+                nav.classList.add('py-6');
+            }
+        };
+    </script>
+</body>
+</html>
