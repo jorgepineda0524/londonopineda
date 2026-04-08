@@ -25,7 +25,13 @@
 
         .cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.25em; text-transform: uppercase; }
 
-        /* EFECTO CINEMATOGRÁFICO (REEMPLAZA AL VIDEO) */
+        /* Ajuste responsivo para el título principal */
+        .hero-title {
+            /* text-4xl en móvil, text-8xl en desktop, escalado fluido */
+            font-size: clamp(2rem, 8vw, 5rem);
+            line-height: 1.2;
+        }
+
         .hero-background {
             position: absolute;
             top: 0;
@@ -36,7 +42,6 @@
             background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            /* Animación de movimiento lento */
             animation: move-bg 30s infinite alternate ease-in-out;
             filter: brightness(0.25) contrast(1.2);
         }
@@ -53,25 +58,23 @@
             z-index: 1;
         }
 
-        /* Línea Dorada de Lujo */
         .luxury-line {
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            width: 100%;
+            width: 90%;
             max-width: 600px;
-            margin: 2.5rem auto;
+            margin: 1.5rem auto;
             opacity: 0.6;
         }
 
-        /* Micro-interacciones */
         .service-row {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(245, 245, 247, 0.05);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .service-row:hover {
             border-bottom-color: var(--gold);
             background: rgba(179, 147, 89, 0.03);
-            padding-left: 20px;
+            padding-left: 10px;
         }
 
         .wa-btn {
@@ -83,7 +86,6 @@
             filter: drop-shadow(0 0 20px rgba(37, 211, 102, 0.5));
         }
 
-        /* Cursor de Élite */
         #custom-cursor {
             width: 8px;
             height: 8px;
@@ -96,6 +98,12 @@
             transition: opacity 0.3s ease;
         }
         body:hover #custom-cursor { opacity: 0.6; }
+
+        /* Ajuste de padding para el navbar en móvil */
+        @media (max-width: 768px) {
+            #navbar { padding: 1.5rem 1.5rem !important; }
+            .hero-title { letter-spacing: 0.1em; }
+        }
     </style>
 </head>
 <body>
@@ -103,12 +111,17 @@
     <div id="custom-cursor" class="hidden md:block"></div>
 
     <nav class="fixed w-full z-50 px-12 py-8 flex justify-between items-center transition-all duration-700" id="navbar">
-        <div class="text-3xl font-bold cinzel text-white">L<span class="text-[#b39359]">&</span>P</div>
+        <div class="text-2xl md:text-3xl font-bold cinzel text-white">L<span class="text-[#b39359]">&</span>P</div>
         <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium text-white/70">
             <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
             <a href="#firma" class="hover:text-white transition-colors">Firma</a>
             <a href="#especialidades" class="hover:text-white transition-colors">Especialidades</a>
             <a href="#contacto" class="text-white border-b border-[#b39359] pb-1">Contacto</a>
+        </div>
+        <div class="md:hidden text-[#b39359]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
         </div>
     </nav>
 
@@ -116,30 +129,30 @@
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         
-        <div class="z-10 px-4" data-aos="fade-up" data-aos-duration="2000">
-            <h1 class="text-6xl md:text-8xl font-medium mb-4 cinzel text-white drop-shadow-[0_15px_15px_rgba(0,0,0,1)]">
+        <div class="z-10 px-6 w-full" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="hero-title font-medium mb-4 cinzel text-white drop-shadow-[0_10px_10px_rgba(0,0,0,1)]">
                 Londoño <span class="text-[#b39359]">&</span> Pineda
             </h1>
             <div class="luxury-line"></div>
-            <p class="text-xl md:text-2xl font-light tracking-[0.35em] text-white/90 italic uppercase">
+            <p class="text-sm md:text-2xl font-light tracking-[0.2em] md:tracking-[0.35em] text-white/90 italic uppercase">
                 Estrategia Legal • Alta Dirección
             </p>
         </div>
     </section>
 
-    <section id="firma" class="py-40 px-8 bg-black">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+    <section id="firma" class="py-24 md:py-40 px-8 bg-black">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 items-center">
             <div class="relative" data-aos="fade-right">
-                <div class="absolute -inset-4 border border-[#b39359]/20"></div>
+                <div class="absolute -inset-2 md:-inset-4 border border-[#b39359]/20"></div>
                 <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop" 
-                     alt="Autoridad" class="grayscale brightness-75 shadow-2xl relative z-10 w-full">
+                     alt="Autoridad" class="grayscale brightness-75 shadow-2xl relative z-10 w-full rounded-sm">
             </div>
             <div data-aos="fade-left">
-                <h2 class="text-4xl mb-10 cinzel">Excelencia Jurídica</h2>
-                <p class="text-2xl text-white leading-relaxed italic mb-10 border-l-2 border-[#b39359] pl-10">
+                <h2 class="text-3xl md:text-4xl mb-6 md:mb-10 cinzel">Excelencia Jurídica</h2>
+                <p class="text-xl md:text-2xl text-white leading-relaxed italic mb-6 md:mb-10 border-l-2 border-[#b39359] pl-6 md:pl-10">
                     Saber actuar donde la complejidad jurídica no admite errores.
                 </p>
-                <div class="text-white/50 text-lg space-y-8 font-light">
+                <div class="text-white/50 text-base md:text-lg space-y-6 md:space-y-8 font-light">
                     <p>Ubicados en Medellín, nuestra firma boutique se especializa en la gestión estratégica de intereses corporativos y patrimoniales de alta complejidad.</p>
                     <p>Transformamos los desafíos legales en pilares de estabilidad y éxito para nuestros representados.</p>
                 </div>
@@ -147,61 +160,59 @@
         </div>
     </section>
 
-    <section id="especialidades" class="py-40 px-8 bg-[#050505]">
-        <div class="max-w-4xl mx-auto mb-28 text-center" data-aos="fade-up">
-            <h2 class="text-3xl cinzel mb-6">Áreas de Especialidad</h2>
-            <p class="text-white/20 tracking-widest text-[10px] uppercase">Rigor • Estrategia • Resultados</p>
+    <section id="especialidades" class="py-24 md:py-40 px-8 bg-[#050505]">
+        <div class="max-w-4xl mx-auto mb-16 md:border-b-28 text-center" data-aos="fade-up">
+            <h2 class="text-2xl md:text-3xl cinzel mb-4 md:mb-6">Áreas de Especialidad</h2>
+            <p class="text-white/20 tracking-widest text-[9px] md:text-[10px] uppercase">Rigor • Estrategia • Resultados</p>
         </div>
         <div class="max-w-5xl mx-auto">
-            <div class="service-row py-12 px-8 flex justify-between items-center group" data-aos="fade-up">
-                <h3 class="text-xl cinzel group-hover:text-[#b39359] transition-colors">Derecho Corporativo</h3>
-                <p class="text-white/30 italic text-lg hidden md:block">Gestión Societaria</p>
+            <div class="service-row py-8 md:py-12 px-4 md:px-8 flex justify-between items-center group" data-aos="fade-up">
+                <h3 class="text-lg md:text-xl cinzel group-hover:text-[#b39359] transition-colors">Derecho Corporativo</h3>
+                <p class="text-white/30 italic text-base md:text-lg hidden sm:block">Gestión Societaria</p>
             </div>
-            <div class="service-row py-12 px-8 flex justify-between items-center group" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl cinzel group-hover:text-[#b39359] transition-colors">Derecho Civil</h3>
-                <p class="text-white/30 italic text-lg hidden md:block">Protección Patrimonial</p>
+            <div class="service-row py-8 md:py-12 px-4 md:px-8 flex justify-between items-center group" data-aos="fade-up">
+                <h3 class="text-lg md:text-xl cinzel group-hover:text-[#b39359] transition-colors">Derecho Civil</h3>
+                <p class="text-white/30 italic text-base md:text-lg hidden sm:block">Protección Patrimonial</p>
             </div>
-            <div class="service-row py-12 px-8 flex justify-between items-center group" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-xl cinzel group-hover:text-[#b39359] transition-colors">Asesoría Notarial</h3>
-                <p class="text-white/30 italic text-lg hidden md:block">Seguridad Jurídica</p>
+            <div class="service-row py-8 md:py-12 px-4 md:px-8 flex justify-between items-center group" data-aos="fade-up">
+                <h3 class="text-lg md:text-xl cinzel group-hover:text-[#b39359] transition-colors">Asesoría Notarial</h3>
+                <p class="text-white/30 italic text-base md:text-lg hidden sm:block">Seguridad Jurídica</p>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="py-32 bg-black border-t border-white/5 text-center">
-        <h2 class="text-6xl cinzel mb-16 text-white">L<span class="text-[#b39359]">&</span>P</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-20 text-white/30 text-[11px] uppercase tracking-[0.5em]">
+    <footer id="contacto" class="py-20 md:py-32 bg-black border-t border-white/5 text-center px-6">
+        <h2 class="text-5xl cinzel mb-12 text-white">L<span class="text-[#b39359]">&</span>P</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-white/30 text-[10px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.5em]">
             <span>Medellín, Colombia</span>
             <span>info@londonopineda.legal</span>
             <span>+57 302 417 0164</span>
         </div>
-        <p class="mt-20 text-[9px] tracking-[1em] text-white/10 uppercase">© 2026 LONDOÑO & PINEDA</p>
+        <p class="mt-16 md:mt-20 text-[8px] md:text-[9px] tracking-[0.8em] text-white/10 uppercase">© 2026 LONDOÑO & PINEDA</p>
     </footer>
 
-    <a href="https://wa.me/573024170164" target="_blank" class="fixed bottom-12 right-12 z-[100] wa-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" class="w-14 h-14 md:w-16 md:h-16">
+    <a href="https://wa.me/573024170164" target="_blank" class="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-[100] wa-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" class="w-12 h-12 md:w-16 md:h-16">
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
 
-        // Cursor Sutil
         const cursor = document.getElementById('custom-cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
 
-        // Navbar Scroll
         window.onscroll = () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 80) {
                 nav.style.background = 'rgba(0,0,0,0.95)';
-                nav.style.padding = '15px 50px';
+                nav.style.padding = window.innerWidth > 768 ? '15px 50px' : '15px 24px';
             } else {
                 nav.style.background = 'transparent';
-                nav.style.padding = '32px 50px';
+                nav.style.padding = window.innerWidth > 768 ? '32px 50px' : '24px 24px';
             }
         };
     </script>
